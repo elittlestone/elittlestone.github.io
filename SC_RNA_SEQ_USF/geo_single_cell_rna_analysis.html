@@ -226,6 +226,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p><strong>For the rest of the analysis, our commands can either be run via pixi by doing: <em>pixi run ‘executable’</em> or by launching a subshell with <em>pixi s</em> and running commands as normal.</strong></p>
+<p><strong>Single-cell RNA seq analysis allows for :</strong></p>
+<ul>
+<li>Cell Type Identification: Researchers can classify and identify different cell types based on their unique gene expression profiles. -Cell state analysis: By comparing gene expression patterns, researchers can identify different cellular states, such as quiescent, activated, or differentiated cells.</li>
+<li>Biomarker discovery: Cell Ranger can help identify genes specifically expressed in specific cell types or conditions, which can serve as potential biomarkers.</li>
+<li>Differential gene expression analysis: Researchers can identify differentially expressed genes between different conditions or cell types, providing insights into molecular differences.</li>
+<li>Cell Trajectory Analysis: By analyzing gene expression changes, researchers can infer cell developmental trajectories and transitions.</li>
+</ul>
 </section>
 <section id="downloading-raw-sequencing-data" class="level2">
 <h2 class="anchored" data-anchor-id="downloading-raw-sequencing-data">Downloading Raw Sequencing Data</h2>
@@ -256,16 +263,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><a href="https://www.10xgenomics.com/support/software/cell-ranger/downloads#download-links">Download CellRanger</a></p>
 <p><strong>Here is an in-depth explanation of the CellRanger software <a href="https://www.scdiscoveries.com/blog/knowledge/cellranger/#what-it-is">What is CellRanger?</a></strong></p>
 <ul>
-<li><p>Read Alignment: The raw sequencing data, which consists of short reads, is aligned to a reference genome using a suitable alignment algorithm. This step assigns reads to their respective genomic locations.</p></li>
-<li><p>Barcode and UMI Processing: Each cell captured by the Chromium platform has a unique barcode and unique molecular identifier (UMI). It uses these barcodes and UMIs to find low-quality cells and identify reads originating from the same cell.</p></li>
-<li><p>Transcript Counting: The aligned reads are then used to count the number of times each unique molecular identifier (UMI) appears for each gene. That helps in quantifying the gene expression levels in each cell.</p></li>
-<li><p>Data Aggregation and Quality Control: The CellRanger pipeline aggregates the counts from all cells into a count matrix, representing each cell’s gene expression profile. Quality control steps are applied to filter out low-quality cells and genes.</p></li>
-<li><p>Normalization and Analysis: The CellRanger pipeline normalizes the count matrix to account for cell sequencing depth differences. Then, it applies differential gene expression analysis, dimensionality reduction (such as principal component analysis or t-SNE), and clustering methods to reveal patterns and relationships among cells.</p></li>
-<li><p>Visualization: Scientists typically visualize the results using various tools that help them interpret and present their findings effectively. These tools include the BioTuring BBrowserX and the 10x Genomics Loupe Browser.</p></li>
-<li><p>Cell Type Identification: Researchers can classify and identify different cell types based on their unique gene expression profiles. -Cell state analysis: By comparing gene expression patterns, researchers can identify different cellular states, such as quiescent, activated, or differentiated cells.</p></li>
-<li><p>Biomarker discovery: Cell Ranger can help identify genes specifically expressed in specific cell types or conditions, which can serve as potential biomarkers.</p></li>
-<li><p>Differential gene expression analysis: Researchers can identify differentially expressed genes between different conditions or cell types, providing insights into molecular differences.</p></li>
-<li><p>Cell Trajectory Analysis: By analyzing gene expression changes, researchers can infer cell developmental trajectories and transitions.</p></li>
+<li>Read Alignment: The raw sequencing data, which consists of short reads, is aligned to a reference genome using a suitable alignment algorithm. This step assigns reads to their respective genomic locations.</li>
+<li>Barcode and UMI Processing: Each cell captured by the Chromium platform has a unique barcode and unique molecular identifier (UMI). It uses these barcodes and UMIs to find low-quality cells and identify reads originating from the same cell.</li>
+<li>Transcript Counting: The aligned reads are then used to count the number of times each unique molecular identifier (UMI) appears for each gene. That helps in quantifying the gene expression levels in each cell.</li>
+<li>Data Aggregation and Quality Control: The CellRanger pipeline aggregates the counts from all cells into a count matrix, representing each cell’s gene expression profile. Quality control steps are applied to filter out low-quality cells and genes.</li>
+<li>Normalization and Analysis: The CellRanger pipeline normalizes the count matrix to account for cell sequencing depth differences. Then, it applies differential gene expression analysis, dimensionality reduction (such as principal component analysis or t-SNE), and clustering methods to reveal patterns and relationships among cells.</li>
+<li>Visualization: Scientists typically visualize the results using various tools that help them interpret and present their findings effectively. These tools include the BioTuring BBrowserX and the 10x Genomics Loupe Browser.</li>
 </ul>
 <div class="cell">
 <details class="code-fold">
