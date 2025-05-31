@@ -150,7 +150,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#downloading-raw-sequencing-data" id="toc-downloading-raw-sequencing-data" class="nav-link" data-scroll-target="#downloading-raw-sequencing-data">Downloading Raw Sequencing Data</a></li>
   <li><a href="#read-alignment-and-transcript-quantification" id="toc-read-alignment-and-transcript-quantification" class="nav-link" data-scroll-target="#read-alignment-and-transcript-quantification">Read Alignment and Transcript Quantification</a>
   <ul class="collapse">
-  <li><a href="#the-next-step-is-to-download-our-reference-human-transcriptome-as-well-as-the-cellranger-softwrae-tool-from-10x-genomics-so-we-can-align-our-raw-reads-and-quantify-them." id="toc-the-next-step-is-to-download-our-reference-human-transcriptome-as-well-as-the-cellranger-softwrae-tool-from-10x-genomics-so-we-can-align-our-raw-reads-and-quantify-them." class="nav-link" data-scroll-target="#the-next-step-is-to-download-our-reference-human-transcriptome-as-well-as-the-cellranger-softwrae-tool-from-10x-genomics-so-we-can-align-our-raw-reads-and-quantify-them.">The next step is to download our reference human transcriptome as well as the cellranger softwrae tool from 10x genomics so we can align our raw reads and quantify them.</a></li>
+  <li><a href="#the-next-step-is-to-download-our-reference-human-transcriptome-as-well-as-the-cellranger-software-tool-from-10x-genomics-so-we-can-align-our-raw-reads-and-quantify-them." id="toc-the-next-step-is-to-download-our-reference-human-transcriptome-as-well-as-the-cellranger-software-tool-from-10x-genomics-so-we-can-align-our-raw-reads-and-quantify-them." class="nav-link" data-scroll-target="#the-next-step-is-to-download-our-reference-human-transcriptome-as-well-as-the-cellranger-software-tool-from-10x-genomics-so-we-can-align-our-raw-reads-and-quantify-them.">The next step is to download our reference human transcriptome as well as the cellranger software tool from 10x genomics so we can align our raw reads and quantify them.</a></li>
   </ul></li>
   <li><a href="#cell-ranger-summary-al02" id="toc-cell-ranger-summary-al02" class="nav-link" data-scroll-target="#cell-ranger-summary-al02">📊 Cell Ranger Summary: AL02</a></li>
   <li><a href="#cell-ranger-summary-al03" id="toc-cell-ranger-summary-al03" class="nav-link" data-scroll-target="#cell-ranger-summary-al03">📊 Cell Ranger Summary: AL03</a></li>
@@ -258,14 +258,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">snakemake</span> <span class="at">-s</span> download_sra_files.smk <span class="at">--cores</span> 8 <span class="at">-p</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>We can also go to the SRA Web Page for this particular entry and find useful information about the sequencing experiment and runs. Again, we can get this meta data programmatically as well using <em>SRATools</em></p>
+<p><strong>We can also go to the SRA Web Page for this particular entry and find useful information about the sequencing experiment and runs. Again, we can get this meta data programmatically as well using <em>SRATools</em></strong></p>
 <p><a href="https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&amp;page_size=10&amp;acc=SRR30255722&amp;display=metadata">Sequence Read Archive Web Page</a></p>
 </section>
 <section id="read-alignment-and-transcript-quantification" class="level2">
 <h2 class="anchored" data-anchor-id="read-alignment-and-transcript-quantification">Read Alignment and Transcript Quantification</h2>
 <p><strong>Reads 1 and 2 are technical reads, while read 3 contains our actual transcript (Read 1 is the index for demultiplexing, read2 is the Unique Molecular Identifier or UMI + barcode).</strong></p>
-<section id="the-next-step-is-to-download-our-reference-human-transcriptome-as-well-as-the-cellranger-softwrae-tool-from-10x-genomics-so-we-can-align-our-raw-reads-and-quantify-them." class="level3">
-<h3 class="anchored" data-anchor-id="the-next-step-is-to-download-our-reference-human-transcriptome-as-well-as-the-cellranger-softwrae-tool-from-10x-genomics-so-we-can-align-our-raw-reads-and-quantify-them.">The next step is to download our reference human transcriptome as well as the cellranger softwrae tool from 10x genomics so we can align our raw reads and quantify them.</h3>
+<section id="the-next-step-is-to-download-our-reference-human-transcriptome-as-well-as-the-cellranger-software-tool-from-10x-genomics-so-we-can-align-our-raw-reads-and-quantify-them." class="level3">
+<h3 class="anchored" data-anchor-id="the-next-step-is-to-download-our-reference-human-transcriptome-as-well-as-the-cellranger-software-tool-from-10x-genomics-so-we-can-align-our-raw-reads-and-quantify-them.">The next step is to download our reference human transcriptome as well as the cellranger software tool from 10x genomics so we can align our raw reads and quantify them.</h3>
 <p><a href="https://www.10xgenomics.com/support/software/cell-ranger/downloads#download-links">Download CellRanger</a></p>
 <ul>
 <li>Read Alignment: The raw sequencing data, which consists of short reads, is aligned to a reference genome using a suitable alignment algorithm. This step assigns reads to their respective genomic locations.</li>
@@ -293,6 +293,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="cell-ranger-summary-al03">📊 Cell Ranger Summary: AL03</h2>
 <iframe src="AL03_web_summary.html" width="100%" height="800px" style="border:none;">
 </iframe>
+<p><strong>In the 10x SC-RNA seq technology, each barcode corresponds to a droplet. Ideally, each droplet will contain one cell. However, it is also possible for two or more cells to end up in a droplet (doublet), or no cells (empty droplet). The knee-plots show how each barcode ranks in terms of how many total UMIs, which represent unique transcripts captured from each cell. Droplets with a sufficiently low UMI count are likely empty droplets, and Cellranger has a probabilistic model it uses to filter out these droplets and only keep ‘real cells’. Our knee-plots show steep dropoffs, meaning there is a clear distinction between real cells and empty droplets.</strong></p>
+<p><strong>The main output of Cellranger is a filtered gene-cell expression matrix; rows are genes, columns are cells, and values in the matrix represent the number of UMIs (transcript counts) for each gene in each cell. This count serves as a proxy for gene expression. This filtered .h5 matrix file can then be used for post-processing with software tools like Scanpy in python or Seurat in R. I will be using Scanpy.</strong></p>
 </section>
 <section id="post-processing-with-scanpy" class="level2">
 <h2 class="anchored" data-anchor-id="post-processing-with-scanpy">Post-processing with Scanpy</h2>
@@ -304,13 +306,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">snakemake</span> <span class="at">-s</span> scanpy.smk <span class="at">--cores</span> 1 <span class="at">-p</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<iframe src="results/qc_figures/violin_AL02.png" width="100%" height="800px" style="border:none;">
+<iframe src="results/qc_figures/violin_AL02.png" width="50%" height="400px" style="border:none;">
 </iframe>
-<iframe src="results/qc_figures/scatter_AL02.png" width="100%" height="800px" style="border:none;">
+<iframe src="results/qc_figures/scatter_AL02.png" width="50%" height="400px" style="border:none;">
 </iframe>
-<iframe src="results/qc_figures/violin_AL03.png" width="100%" height="800px" style="border:none;">
+<iframe src="results/qc_figures/violin_AL03.png" width="50%" height="400px" style="border:none;">
 </iframe>
-<iframe src="results/qc_figures/scatter_AL03.png" width="100%" height="800px" style="border:none;">
+<iframe src="results/qc_figures/scatter_AL03.png" width="50%" height="400px" style="border:none;">
 </iframe>
 <section id="doublet-detection" class="level3">
 <h3 class="anchored" data-anchor-id="doublet-detection">Doublet Detection</h3>
@@ -334,7 +336,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="clustering" class="level3">
 <h3 class="anchored" data-anchor-id="clustering">Clustering</h3>
-<p><strong>Leiden graph-clustering </strong> ****</p>
+<p><strong>Leiden graph-clustering </strong></p>
+<p><strong>The leiden graph-clustering </strong></p>
 
 
 </section>
