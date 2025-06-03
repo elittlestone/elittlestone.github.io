@@ -7,7 +7,7 @@ website:
   navbar:
     left:
       - text: Home
-        href: /
+        href: index.html
       - text: Single Cell RNA-seq
         href: sc_rna_seq_analysis/index.html
   page-footer: "© 2025 Ethan Littlestone"
@@ -17,3 +17,5 @@ format:
     theme: cosmo
     css: custom_theme.css
 
+resources:
+  - sc_rna_seq_analysis/results/figures/*
