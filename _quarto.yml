@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "Ethan Littlestone"
+  site-url: https://elittlestone.github.io
+  navbar:
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Single Cell RNA-seq
+        href: sc_rna_seq_analysis/index.qmd
+  page-footer: "© 2025 Ethan Littlestone"
+
+format:
+  html:
+    theme: cosmo
+    css: custom_theme.css
+
