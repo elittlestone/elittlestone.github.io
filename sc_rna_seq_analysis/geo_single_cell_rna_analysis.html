@@ -149,28 +149,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#environment-setuppackage-installation" id="toc-environment-setuppackage-installation" class="nav-link active" data-scroll-target="#environment-setuppackage-installation">Environment Setup/Package Installation</a></li>
-  <li><a href="#single-cell-rna-seq-workflow" id="toc-single-cell-rna-seq-workflow" class="nav-link" data-scroll-target="#single-cell-rna-seq-workflow">Single-Cell RNA-Seq Workflow</a>
+  <li><a href="#environment-setuppackage-installation" id="toc-environment-setuppackage-installation" class="nav-link active" data-scroll-target="#environment-setuppackage-installation">1. Environment Setup/Package Installation</a></li>
+  <li><a href="#single-cell-rna-seq-workflow" id="toc-single-cell-rna-seq-workflow" class="nav-link" data-scroll-target="#single-cell-rna-seq-workflow">2. Single-Cell RNA-Seq Workflow</a>
   <ul class="collapse">
-  <li><a href="#downloading-raw-sequencing-data" id="toc-downloading-raw-sequencing-data" class="nav-link" data-scroll-target="#downloading-raw-sequencing-data">1. Downloading Raw Sequencing Data</a></li>
-  <li><a href="#read-alignment-and-transcript-quantification" id="toc-read-alignment-and-transcript-quantification" class="nav-link" data-scroll-target="#read-alignment-and-transcript-quantification">2. Read Alignment and Transcript Quantification</a></li>
-  <li><a href="#cellranger-count-output" id="toc-cellranger-count-output" class="nav-link" data-scroll-target="#cellranger-count-output">3. Cellranger Count Output</a>
+  <li><a href="#downloading-raw-sequencing-data" id="toc-downloading-raw-sequencing-data" class="nav-link" data-scroll-target="#downloading-raw-sequencing-data">2.1 Downloading Raw Sequencing Data</a></li>
+  <li><a href="#read-alignment-and-transcript-quantification" id="toc-read-alignment-and-transcript-quantification" class="nav-link" data-scroll-target="#read-alignment-and-transcript-quantification">2.2 Read Alignment and Transcript Quantification</a></li>
+  <li><a href="#cellranger-count-output" id="toc-cellranger-count-output" class="nav-link" data-scroll-target="#cellranger-count-output">2.3 Cellranger Count Output</a>
   <ul class="collapse">
   <li><a href="#cell-ranger-summary-al02" id="toc-cell-ranger-summary-al02" class="nav-link" data-scroll-target="#cell-ranger-summary-al02">📊 Cell Ranger Summary: AL02</a></li>
   <li><a href="#cell-ranger-summary-al03" id="toc-cell-ranger-summary-al03" class="nav-link" data-scroll-target="#cell-ranger-summary-al03">📊 Cell Ranger Summary: AL03</a></li>
   </ul></li>
-  <li><a href="#post-processing-with-scanpy" id="toc-post-processing-with-scanpy" class="nav-link" data-scroll-target="#post-processing-with-scanpy">Post-processing with Scanpy</a>
+  <li><a href="#post-processing-with-scanpy" id="toc-post-processing-with-scanpy" class="nav-link" data-scroll-target="#post-processing-with-scanpy">3 Post-processing with Scanpy</a>
   <ul class="collapse">
-  <li><a href="#quality-control" id="toc-quality-control" class="nav-link" data-scroll-target="#quality-control">4 Quality Control</a></li>
-  <li><a href="#analyze-mito-counts-and-select-informative-genescells" id="toc-analyze-mito-counts-and-select-informative-genescells" class="nav-link" data-scroll-target="#analyze-mito-counts-and-select-informative-genescells">4.1 Analyze Mito Counts and Select Informative Genes/Cells</a></li>
-  <li><a href="#normalization" id="toc-normalization" class="nav-link" data-scroll-target="#normalization">5. Normalization</a></li>
-  <li><a href="#feature-selection" id="toc-feature-selection" class="nav-link" data-scroll-target="#feature-selection">6. Feature Selection</a></li>
-  <li><a href="#dimensionality-reduction" id="toc-dimensionality-reduction" class="nav-link" data-scroll-target="#dimensionality-reduction">7. Dimensionality Reduction</a></li>
-  <li><a href="#nearest-neighbor-graph-constructionvisualization" id="toc-nearest-neighbor-graph-constructionvisualization" class="nav-link" data-scroll-target="#nearest-neighbor-graph-constructionvisualization">8. Nearest neighbor graph construction/visualization</a></li>
-  <li><a href="#clustering" id="toc-clustering" class="nav-link" data-scroll-target="#clustering">9. Clustering</a></li>
-  <li><a href="#re-assess-qc-and-cell-filtering" id="toc-re-assess-qc-and-cell-filtering" class="nav-link" data-scroll-target="#re-assess-qc-and-cell-filtering">10. Re-assess QC and Cell-filtering</a></li>
-  <li><a href="#manual-cell-type-annotation" id="toc-manual-cell-type-annotation" class="nav-link" data-scroll-target="#manual-cell-type-annotation">11. Manual cell-type annotation</a></li>
-  <li><a href="#differential-expression-analysis" id="toc-differential-expression-analysis" class="nav-link" data-scroll-target="#differential-expression-analysis">12. Differential Expression Analysis</a></li>
+  <li><a href="#quality-control" id="toc-quality-control" class="nav-link" data-scroll-target="#quality-control">3.1 Quality Control</a></li>
+  <li><a href="#analyze-mito-counts-and-select-informative-genescells" id="toc-analyze-mito-counts-and-select-informative-genescells" class="nav-link" data-scroll-target="#analyze-mito-counts-and-select-informative-genescells">3.1.1 Analyze Mito Counts and Select Informative Genes/Cells</a></li>
+  <li><a href="#normalization" id="toc-normalization" class="nav-link" data-scroll-target="#normalization">3.2 Normalization</a></li>
+  <li><a href="#feature-selection" id="toc-feature-selection" class="nav-link" data-scroll-target="#feature-selection">3.3. Feature Selection</a></li>
+  <li><a href="#dimensionality-reduction" id="toc-dimensionality-reduction" class="nav-link" data-scroll-target="#dimensionality-reduction">3.4 Dimensionality Reduction</a></li>
+  <li><a href="#nearest-neighbor-graph-constructionvisualization" id="toc-nearest-neighbor-graph-constructionvisualization" class="nav-link" data-scroll-target="#nearest-neighbor-graph-constructionvisualization">3.5 Nearest neighbor graph construction/visualization</a></li>
+  <li><a href="#clustering" id="toc-clustering" class="nav-link" data-scroll-target="#clustering">3.6 Clustering</a></li>
+  <li><a href="#re-assess-qc-and-cell-filtering" id="toc-re-assess-qc-and-cell-filtering" class="nav-link" data-scroll-target="#re-assess-qc-and-cell-filtering">3.7 Re-assess QC and Cell-filtering</a></li>
+  <li><a href="#manual-cell-type-annotation" id="toc-manual-cell-type-annotation" class="nav-link" data-scroll-target="#manual-cell-type-annotation">3.8 Manual cell-type annotation</a></li>
+  <li><a href="#differential-expression-analysis" id="toc-differential-expression-analysis" class="nav-link" data-scroll-target="#differential-expression-analysis">3.9 Differential Expression Analysis</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -206,7 +206,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <section id="environment-setuppackage-installation" class="level2">
-<h2 class="anchored" data-anchor-id="environment-setuppackage-installation">Environment Setup/Package Installation</h2>
+<h2 class="anchored" data-anchor-id="environment-setuppackage-installation">1. Environment Setup/Package Installation</h2>
 <p><strong>I will be using Quarto, a super set of R Markdown for this Single-Cell RNA-seq Analysis. Quarto allows for the creation of detailed scientific reports (along with other formats like interactive web pages, dashboards, etc.) to help encourage collaboration and shareability of bioinformatics workflows.</strong></p>
 <p><strong>Along with Quarto, I will be using the package manager <em>pixi</em> for further reproducibility, as well as the data workflow software <em>snakemake</em> for handling input/output and making the analysis clear and easy to follow.</strong></p>
 <p>The following links give instructions for downloading/installing and using these helpful tools.</p>
@@ -240,7 +240,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>For the rest of the analysis, our commands can either be run via pixi by doing: <em>pixi run ‘executable’</em> or by launching a subshell with <em>pixi s</em> and running commands as normal.</strong></p>
 </section>
 <section id="single-cell-rna-seq-workflow" class="level1">
-<h1>Single-Cell RNA-Seq Workflow</h1>
+<h1>2. Single-Cell RNA-Seq Workflow</h1>
 <p><strong>I used the Single-Cell best practices guide for help on the general pipeline for SC-RNA Seq analysis</strong> <a href="https://www.sc-best-practices.org/introduction/scrna_seq.html">Single-Cell Best Practices</a></p>
 <p><strong>As the 10x Genomics Cellranger Tutorial explains, Single-cell RNA seq analysis allows for :</strong></p>
 <p><a href="https://www.scdiscoveries.com/blog/knowledge/cellranger/#what-it-is">What is CellRanger?</a></p>
@@ -252,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Cell Trajectory Analysis: By analyzing gene expression changes, researchers can infer cell developmental trajectories and transitions.</p></li>
 </ul>
 <section id="downloading-raw-sequencing-data" class="level2">
-<h2 class="anchored" data-anchor-id="downloading-raw-sequencing-data">1. Downloading Raw Sequencing Data</h2>
+<h2 class="anchored" data-anchor-id="downloading-raw-sequencing-data">2.1 Downloading Raw Sequencing Data</h2>
 <p><strong>Sratools is a suite of command-line tools that allows for the programmatic downloading of GEO data. This avoids having to download through the web and promotes reproducibility as well as error handling. Sratools comes with multiple programs, here we use the <em>fasterq-dump</em> command. Running fasterq-dump -h’ after downloading sratools through pixi gives helpful instructions on how to use the tool as well as the variety of different flags/parameters that can be passed to this program. I used fasterq-dump in a snakemake script to download our rna-seq reads and convert them to fastq format (fasterq-dump handles the download and file format conversion for us).</strong></p>
 <p><strong>I have also created a configuration file where we can store hard-coded values which can then be referenced via our snakefile. This makes the process highly resistant to errors consistent with hard-coding file names. From the email that Dr.&nbsp;Zhang sent me that brings us to a GEO page, I then found the SRR accession ID. Providing this SRR to the <em>fasterq-dump</em> program will then download the appropriate raw sequencing data.</strong></p>
 <p><a href="https://github.com/ncbi/sra-tools">Sratools</a> <a href="https://github.com/ncbi/sra-tools/wiki/HowTo:-fasterq-dump">Fasterq-dump</a></p>
@@ -266,7 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><a href="https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&amp;page_size=10&amp;acc=SRR30255722&amp;display=metadata">Sequence Read Archive Web Page</a></p>
 </section>
 <section id="read-alignment-and-transcript-quantification" class="level2">
-<h2 class="anchored" data-anchor-id="read-alignment-and-transcript-quantification">2. Read Alignment and Transcript Quantification</h2>
+<h2 class="anchored" data-anchor-id="read-alignment-and-transcript-quantification">2.2 Read Alignment and Transcript Quantification</h2>
 <p><strong>In our 10x SC-RNA seq raw sequencing data, Reads 1 and 2 are technical reads, while read 3 contains our actual transcript (Read 1 is the index for demultiplexing, read2 is the Unique Molecular Identifier or UMI + cell barcode).</strong></p>
 <p><strong>The next step is to download our reference human transcriptome as well as the Cellranger software tool from 10x genomics so we can align our raw reads and quantify them.</strong></p>
 <p><a href="https://www.10xgenomics.com/support/software/cell-ranger/downloads#download-links">Download CellRanger</a></p>
@@ -286,7 +286,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 <section id="cellranger-count-output" class="level2">
-<h2 class="anchored" data-anchor-id="cellranger-count-output">3. Cellranger Count Output</h2>
+<h2 class="anchored" data-anchor-id="cellranger-count-output">2.3 Cellranger Count Output</h2>
 <p><strong>Cellranger is able to map our reads to the transcriptome and perform transcript quantification. The tool outputs an in-depth summary html file with detailed summary statistics. I have embedded an interactive html that can be explored for each sample in order to explore the outputted results from Cellranger count. As we can see from these summary statistics, we have &gt; 90% of reads mapping to our transcriptome, indicating high quality reads and a successful library prep. The mean reads per cell is not directly comparable between samples due to the different number of cells in each sample. We can also see the median number of genes expressed per cell in each sample.</strong></p>
 <section id="cell-ranger-summary-al02" class="level3">
 <h3 class="anchored" data-anchor-id="cell-ranger-summary-al02">📊 Cell Ranger Summary: AL02</h3>
@@ -303,13 +303,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="post-processing-with-scanpy" class="level2">
-<h2 class="anchored" data-anchor-id="post-processing-with-scanpy">Post-processing with Scanpy</h2>
+<h2 class="anchored" data-anchor-id="post-processing-with-scanpy">3 Post-processing with Scanpy</h2>
 <p><a href="https://scanpy.readthedocs.io/en/stable/tutorials/basics/clustering.html">Scanpy Tutorial</a></p>
 <section id="quality-control" class="level3">
-<h3 class="anchored" data-anchor-id="quality-control">4 Quality Control</h3>
+<h3 class="anchored" data-anchor-id="quality-control">3.1 Quality Control</h3>
 </section>
 <section id="analyze-mito-counts-and-select-informative-genescells" class="level3">
-<h3 class="anchored" data-anchor-id="analyze-mito-counts-and-select-informative-genescells">4.1 Analyze Mito Counts and Select Informative Genes/Cells</h3>
+<h3 class="anchored" data-anchor-id="analyze-mito-counts-and-select-informative-genescells">3.1.1 Analyze Mito Counts and Select Informative Genes/Cells</h3>
 <p><strong>The first steps of analyzing our Cell Ranger output involve Quality Control (QC), which includes assessing cells with high mitochondrial gene counts. High mitochondrial RNA fraction often indicates stressed, dying, or damaged cells that were lysed prematurely before droplet encapsulation in the 10x Genomics workflow. These cells are commonly filtered out because their RNA profiles may be compromised and potentially contaminated with RNA from other lysed cells.</strong></p>
 <div class="cell">
 <details class="code-fold">
@@ -331,22 +331,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </iframe>
 <p><strong>The violin plots show the number of genes expressed in each cell, the total number of UMIs in each cell, and the percentage of mitochondrial UMIs/transcripts. For both samples, we see the majority of cells have ~ 1500 genes expressed, somewhere in the several thousand UMI range, and have very small proportions of mitochondrial RNA. The scatter plots just combine these QC metrics into one plot. I filtered the data to only keep cells that have a minimum of 100 genes expressed as well as removed genes which are found in less than 3 cells. </strong></p>
 <section id="doublet-detection" class="level4">
-<h4 class="anchored" data-anchor-id="doublet-detection">4.2 Doublet Detection</h4>
+<h4 class="anchored" data-anchor-id="doublet-detection">3.1.2 Doublet Detection</h4>
 <p><strong>Next, we want to perform doublet detection. Doublets are droplets which have two or more cells and can be detected via Scanpy’s .scrublet method/function. From the scanpy documentation : “Scrublet predicts cell doublets using a nearest-neighbor classifier of observed transcriptomes and simulated doublets”. Doublet identification and removal is a CRITICAL step in post-processing. If we treat a droplet as representing a single cell when it actually represents the transcriptomic profile of multiple cells, this can dramatically skew our clustering/cell-type annotation downstream.</strong></p>
 </section>
 </section>
 <section id="normalization" class="level3">
-<h3 class="anchored" data-anchor-id="normalization">5. Normalization</h3>
+<h3 class="anchored" data-anchor-id="normalization">3.2 Normalization</h3>
 <p><strong>The next step is to normalize our gene expression values across cells. Differences in transcript counts between cells could be the result of a number of different technical reasons, including sequencing depth and capture efficiency, rather than reflecting true differences in gene expression levels between the cells. Additionally, some genes might be extremely highly expressed, while other genes have normal to lower level of expression, which can skew downstream steps like clustering. I use scanpy’s .normalize_total method to make transcript count comparisons between cells accurate and also perform log1p transformation to lessen the impact of very highly or lowly expressed genes.</strong></p>
 </section>
 <section id="feature-selection" class="level3">
-<h3 class="anchored" data-anchor-id="feature-selection">6. Feature Selection</h3>
+<h3 class="anchored" data-anchor-id="feature-selection">3.3. Feature Selection</h3>
 <p><strong>Feature selection involves selecting only the most informative genes for downstream analysis. If our main goal is distinguishing cell-types, the majority of genes are uninformative for this process (ex. housekeeping genes that are expressed at relatively same levels across different cell types) and additionally increase computational complexity required for steps like clustering/annotation. We choose the 2000 most variable genes by using scanpy’s .highly_variable_genes() function. The figures below are visualizations of each gene’s variation across cells.</strong></p>
-<p><strong>Variable genes AL02</strong> <iframe src="results/figures/filter_genes_dispersion_AL02.png" width="100%" height="400px" style="border:none;"></iframe></p>
-<p><strong>Variable genes AL03</strong> <iframe src="results/figures/filter_genes_dispersion_AL03.png" width="100%" height="400px" style="border:none;"></iframe></p>
+<p><strong>Variable genes AL02</strong></p>
+<iframe src="results/figures/filter_genes_dispersion_AL02.png" width="100%" height="400px" style="border:none;">
+</iframe>
+<p><strong>Variable genes AL03</strong></p>
+<iframe src="results/figures/filter_genes_dispersion_AL03.png" width="100%" height="400px" style="border:none;">
+</iframe>
 </section>
 <section id="dimensionality-reduction" class="level3">
-<h3 class="anchored" data-anchor-id="dimensionality-reduction">7. Dimensionality Reduction</h3>
+<h3 class="anchored" data-anchor-id="dimensionality-reduction">3.4 Dimensionality Reduction</h3>
 <p><strong>Dimensionality reduction involves taking our selected highly-variable genes, and performing some computational steps like principal component analysis (PCA) in order to essentially collapse these genes into a smaller subset of explainers or ‘dimensions/axes’ that account for the variation we see in expression levels of particular genes between cells. This reduces the computational complexity even further for the downstream step of clustering. Scanpy’s function .pca computes this for us.</strong></p>
 <p><strong>PCA plot AL02</strong></p>
 <iframe src="results/figures/pca_variance_ratio_AL02.pdf" width="100%" height="400px" style="border:none;">
@@ -356,15 +360,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </iframe>
 </section>
 <section id="nearest-neighbor-graph-constructionvisualization" class="level3">
-<h3 class="anchored" data-anchor-id="nearest-neighbor-graph-constructionvisualization">8. Nearest neighbor graph construction/visualization</h3>
-<p><strong>Now that we have our PCA representation of the cell x gene data matrix, we can compute the neighborhood graph of cells.</strong></p>
+<h3 class="anchored" data-anchor-id="nearest-neighbor-graph-constructionvisualization">3.5 Nearest neighbor graph construction/visualization</h3>
+<p><strong>Now that we have our PCA representation of the cell x gene data matrix, we can compute the neighborhood graph of cells with scanpy’s .neighbors method. After that, we embed this higher-dimensional graph into 2D by using Uniform Manifold Approximate Projection or UMAP; .umap in scanpy. </strong></p>
 <iframe src="results/figures/umap_neighbors_AL02.png" width="100%" height="400px" style="border:none;">
 </iframe>
 <iframe src="results/figures/umap_neighbors_AL03.png" width="100%" height="400px" style="border:none;">
 </iframe>
 </section>
 <section id="clustering" class="level3">
-<h3 class="anchored" data-anchor-id="clustering">9. Clustering</h3>
+<h3 class="anchored" data-anchor-id="clustering">3.6 Clustering</h3>
 <p><strong>Leiden graph-clustering </strong></p>
 <iframe src="results/figures/umap_leiden_AL02.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
@@ -373,7 +377,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>The leiden graph-clustering </strong></p>
 </section>
 <section id="re-assess-qc-and-cell-filtering" class="level3">
-<h3 class="anchored" data-anchor-id="re-assess-qc-and-cell-filtering">10. Re-assess QC and Cell-filtering</h3>
+<h3 class="anchored" data-anchor-id="re-assess-qc-and-cell-filtering">3.7 Re-assess QC and Cell-filtering</h3>
 <iframe src="results/figures/umap_doublet_qc_AL02.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
 <iframe src="results/figures/umap_mt_counts_AL02.pdf" width="100%" height="400px" style="border:none;">
@@ -384,7 +388,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </iframe>
 </section>
 <section id="manual-cell-type-annotation" class="level3">
-<h3 class="anchored" data-anchor-id="manual-cell-type-annotation">11. Manual cell-type annotation</h3>
+<h3 class="anchored" data-anchor-id="manual-cell-type-annotation">3.8 Manual cell-type annotation</h3>
 <iframe src="results/figures/umap_annotations_AL02.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
 <iframe src="results/figures/umap_annotations_AL03.pdf" width="100%" height="400px" style="border:none;">
@@ -400,7 +404,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </iframe>
 </section>
 <section id="differential-expression-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="differential-expression-analysis">12. Differential Expression Analysis</h3>
+<h3 class="anchored" data-anchor-id="differential-expression-analysis">3.9 Differential Expression Analysis</h3>
 <iframe src="results/figures/dotplot_ranked_genes_AL03.png" width="100%" height="400px" style="border:none;">
 </iframe>
 <iframe src="results/figures/dotplot_ranked_genes_AL02.png" width="100%" height="400px" style="border:none;">
