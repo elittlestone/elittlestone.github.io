@@ -281,7 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">snakemake</span> <span class="at">-s</span> download_ref_and_run_cellranger.smk <span class="at">--cores</span> 1 <span class="at">-p</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">snakemake</span> <span class="at">-s</span> download_ref_and_run_cellranger.smk <span class="at">--cores</span> 8 <span class="at">-p</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -314,7 +314,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">snakemake</span> <span class="at">-s</span> scanpy.smk <span class="at">--cores</span> 1 <span class="at">-p</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">snakemake</span> <span class="at">-s</span> scanpy.smk <span class="at">--cores</span> 8 <span class="at">-p</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><strong>Violin plot AL02</strong></p>
@@ -369,7 +369,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="clustering" class="level3">
 <h3 class="anchored" data-anchor-id="clustering">3.6 Clustering</h3>
-<p><strong>Now that we have computed the nearest-neighbor graphs, we apply the leiden clustering algorithm. As the scanpy tutorial explains, the leiden clustering is applied directly to the neigbhorhood graph of cells and assigns each cell to a cluster.</strong></p>
+<p><strong>Once we have computed the nearest-neighbor graphs, we apply the leiden clustering algorithm. As the scanpy tutorial explains, the leiden clustering is applied directly to the neigbhorhood graph of cells and assigns each cell to a cluster.</strong></p>
 <p><strong>Leiden Clustering UMAP AL02</strong></p>
 <iframe src="results/figures/umap_leiden_AL02.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
@@ -379,6 +379,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="re-assess-qc-and-cell-filtering" class="level3">
 <h3 class="anchored" data-anchor-id="re-assess-qc-and-cell-filtering">3.7 Re-assess QC and Cell-filtering</h3>
+<p><strong>In order to </strong></p>
 <iframe src="results/figures/umap_doublet_qc_AL02.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
 <iframe src="results/figures/umap_mt_counts_AL02.pdf" width="100%" height="400px" style="border:none;">
