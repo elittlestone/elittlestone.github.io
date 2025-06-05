@@ -169,8 +169,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#nearest-neighbor-graph-constructionvisualization" id="toc-nearest-neighbor-graph-constructionvisualization" class="nav-link" data-scroll-target="#nearest-neighbor-graph-constructionvisualization">3.5 Nearest neighbor graph construction/visualization</a></li>
   <li><a href="#clustering" id="toc-clustering" class="nav-link" data-scroll-target="#clustering">3.6 Clustering</a></li>
   <li><a href="#re-assess-qc-and-cell-filtering" id="toc-re-assess-qc-and-cell-filtering" class="nav-link" data-scroll-target="#re-assess-qc-and-cell-filtering">3.7 Re-assess QC and Cell-filtering</a></li>
-  <li><a href="#manual-cell-type-annotation" id="toc-manual-cell-type-annotation" class="nav-link" data-scroll-target="#manual-cell-type-annotation">3.8 Manual cell-type annotation</a></li>
-  <li><a href="#differential-expression-analysis" id="toc-differential-expression-analysis" class="nav-link" data-scroll-target="#differential-expression-analysis">3.9 Differential Expression Analysis</a></li>
+  <li><a href="#manual-cell-type-annotation-and-differential-gene-expression-analysis" id="toc-manual-cell-type-annotation-and-differential-gene-expression-analysis" class="nav-link" data-scroll-target="#manual-cell-type-annotation-and-differential-gene-expression-analysis">3.8 Manual Cell-type annotation and Differential Gene Expression Analysis</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -394,31 +393,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <iframe src="results/figures/umap_mt_counts_AL03.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
 </section>
-<section id="manual-cell-type-annotation" class="level3">
-<h3 class="anchored" data-anchor-id="manual-cell-type-annotation">3.8 Manual cell-type annotation</h3>
-<p><strong>Before we begin to annotate our clusters, we have to decide on the resolution of the leiden algorithm. The higher the resolution, the more distinct clusters we get, and vice versa. This means that if we pick too low of a resolution, we can only look at large/general cell-types (B-cells, T-cells, etc), versus if we pick too large a resolution, we risk segregating identical cell-types into different clusters. I plotted the different resolutions below and decided to choose 0.5</strong></p>
-<p><strong>AL02 UMAP Leiden Resolutions</strong> <iframe src="results/figures/umap_resolutions_AL02.pdf" width="100%" height="400px" style="border:none;"></iframe></p>
+<section id="manual-cell-type-annotation-and-differential-gene-expression-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="manual-cell-type-annotation-and-differential-gene-expression-analysis">3.8 Manual Cell-type annotation and Differential Gene Expression Analysis</h3>
+<p><strong>Before we begin to annotate our clusters, we have to decide on the resolution of the leiden algorithm. The higher the resolution, the more distinct clusters we get, and vice versa. This means that if we pick too low of a resolution, we can only look at broader cell-types (B-cells, T-cells, etc), versus if we pick too large a resolution, we risk segregating identical cell-types into different clusters. I plotted the different resolutions below and went with 0.5, but we could always change this depending on our results.</strong></p>
+<p><strong>AL02 UMAP Leiden Resolutions</strong></p>
+<iframe src="results/figures/umap_resolutions_AL02.pdf" width="100%" height="400px" style="border:none;">
+</iframe>
 <p><strong>AL03 UMAP Leiden Resolutions</strong></p>
 <iframe src="results/figures/umap_resolutions_AL03.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
+<p><strong>Cell-type annotation is performed by using a set of marker genes, which are genes that are often highly expressed in a particular cell-type, to label our clusters. I used the scanpy tutorial’s marker gene set, which was obtained from the single-cell best practice web book I mentioned earlier.</strong></p>
 <iframe src="results/figures/umap_annotations_AL02.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
 <iframe src="results/figures/umap_annotations_AL02.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
 <iframe src="results/figures/umap_annotations_AL03.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
-<iframe src="results/figures/dotplot_0.02_AL02.png" width="100%" height="400px" style="border:none;">
-</iframe>
-<iframe src="results/figures/dotplot_0.02_AL03.png" width="100%" height="400px" style="border:none;">
-</iframe>
-
 <iframe src="results/figures/dotplot_0.50_AL02.png" width="100%" height="400px" style="border:none;">
 </iframe>
 <iframe src="results/figures/dotplot_0.50_AL03.png" width="100%" height="400px" style="border:none;">
 </iframe>
-</section>
-<section id="differential-expression-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="differential-expression-analysis">3.9 Differential Expression Analysis</h3>
 <iframe src="results/figures/dotplot_ranked_genes_AL03.png" width="100%" height="400px" style="border:none;">
 </iframe>
 <iframe src="results/figures/dotplot_ranked_genes_AL02.png" width="100%" height="400px" style="border:none;">
