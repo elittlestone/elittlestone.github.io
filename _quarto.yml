@@ -1,5 +1,6 @@
 project:
   type: website
+  resources: sc_rna_seq_analysis/results/figures
 
 website:
   title: "Ethan Littlestone"
@@ -17,5 +18,3 @@ format:
     theme: cosmo
     css: custom_theme.css
 
-resources:
-  - sc_rna_seq_analysis/results/figures/*
