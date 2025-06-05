@@ -351,7 +351,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="dimensionality-reduction" class="level3">
 <h3 class="anchored" data-anchor-id="dimensionality-reduction">3.4 Dimensionality Reduction</h3>
-<p><strong>Dimensionality reduction involves taking our selected highly-variable genes, and performing some computational steps like principal component analysis (PCA) in order to essentially collapse these genes into a smaller subset of explainers or ‘dimensions/axes’ that account for the variation we see in expression levels of particular genes between cells. This reduces the computational complexity even further for the downstream step of clustering. Scanpy’s function .pca computes this for us.</strong></p>
+<p><strong>Dimensionality reduction involves taking our selected highly-variable genes, and performing some computational steps like principal component analysis (PCA) in order to essentially collapse these genes into a smaller subset of explainers or ‘dimensions/axes’ that account for the variation we see in expression levels of genes between cells. This reduces the computational complexity even further for the downstream step of clustering. Scanpy’s function .pca computes this for us.</strong></p>
 <p><strong>PCA plot AL02</strong></p>
 <iframe src="results/figures/pca_variance_ratio_AL02.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
@@ -361,7 +361,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="nearest-neighbor-graph-constructionvisualization" class="level3">
 <h3 class="anchored" data-anchor-id="nearest-neighbor-graph-constructionvisualization">3.5 Nearest neighbor graph construction/visualization</h3>
-<p><strong>Now that we have our PCA representation of the cell x gene data matrix, we can compute the neighborhood graph of cells with scanpy’s .neighbors method. After that, we embed this higher-dimensional graph into 2D by using Uniform Manifold Approximate Projection or UMAP; .umap in scanpy. </strong></p>
+<p><strong>Now that we have our PCA representation of the cell x gene data matrix, we can compute the neighborhood graph of cells with scanpy’s .neighbors method. This neighborhood graph essentially encodes the cell to cell similarities. After that, we embed this higher-dimensional graph into 2D by using Uniform Manifold Approximate and Projection or UMAP; .umap() in scanpy. </strong></p>
 <iframe src="results/figures/umap_neighbors_AL02.png" width="100%" height="400px" style="border:none;">
 </iframe>
 <iframe src="results/figures/umap_neighbors_AL03.png" width="100%" height="400px" style="border:none;">
@@ -369,12 +369,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="clustering" class="level3">
 <h3 class="anchored" data-anchor-id="clustering">3.6 Clustering</h3>
-<p><strong>Leiden graph-clustering </strong></p>
+<p><strong>Now that we have computed the nearest-neighbor graphs, we apply the leiden clustering algorithm. As the scanpy tutorial explains, the leiden clustering is applied directly to the neigbhorhood graph of cells and assigns each cell to a cluster.</strong></p>
+<p><strong>Leiden Clustering UMAP AL02</strong></p>
 <iframe src="results/figures/umap_leiden_AL02.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
+<p><strong>Leiden Clustering UMAP AL03</strong></p>
 <iframe src="results/figures/umap_leiden_AL03.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
-<p><strong>The leiden graph-clustering </strong></p>
 </section>
 <section id="re-assess-qc-and-cell-filtering" class="level3">
 <h3 class="anchored" data-anchor-id="re-assess-qc-and-cell-filtering">3.7 Re-assess QC and Cell-filtering</h3>
