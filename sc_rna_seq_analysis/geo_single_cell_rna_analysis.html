@@ -402,26 +402,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>AL03 UMAP Leiden Resolutions</strong></p>
 <iframe src="results/figures/umap_resolutions_AL03.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
-<p><strong>Cell-type annotation is performed by using a set of marker genes, which are genes that are often highly expressed in a particular cell-type, to label our clusters. I used the scanpy tutorial’s marker gene set, which was obtained from the single-cell best practice web book I mentioned earlier.</strong></p>
-<iframe src="results/figures/umap_annotations_AL02.pdf" width="100%" height="400px" style="border:none;">
-</iframe>
+<p><strong>Cell-type annotation involves using a set of marker genes, which are genes that are often highly expressed in a particular cell-type, to label our clusters. We use scanpy’s rank_genes_groups() function, which performs the differential expression by using the Wilcoxon ranked sum test to determine which genes in each cluster are significantly differently expressed than in other clusters. Each cluster </strong></p>
+<p><strong>I used the scanpy tutorial’s marker gene set, which was obtained from the single-cell best practice web book I mentioned earlier. </strong></p>
+<hr>
 <iframe src="results/figures/umap_annotations_AL02.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
 <iframe src="results/figures/umap_annotations_AL03.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
-<iframe src="results/figures/dotplot_0.50_AL02.png" width="100%" height="400px" style="border:none;">
-</iframe>
-<iframe src="results/figures/dotplot_0.50_AL03.png" width="100%" height="400px" style="border:none;">
-</iframe>
+<p><strong>Dotplot of DE Genes AL02</strong></p>
 <iframe src="results/figures/dotplot_ranked_genes_AL03.png" width="100%" height="400px" style="border:none;">
 </iframe>
-<iframe src="results/figures/dotplot_ranked_genes_AL02.png" width="100%" height="400px" style="border:none;">
-</iframe>
+<p><strong>Dotplot of DE Genes AL02</strong> <iframe src="results/figures/dotplot_ranked_genes_AL02.png" width="100%" height="400px" style="border:none;"></iframe></p>
 <p><strong>The table below shows the top 10 differentially expressed genes per cluster</strong></p>
-<iframe src="results/figures/top10_degs_all_clusters_AL02.html" width="100%" height="500px" style="border:none;">
-</iframe>
-<iframe src="results/figures/top10_degs_all_clusters_AL03.html" width="100%" height="500px" style="border:none;">
-</iframe>
+<p><strong>AL02</strong> <iframe src="results/figures/top10_degs_all_clusters_AL02.html" width="100%" height="500px" style="border:none;"></iframe></p>
+<p><strong>AL03</strong> <iframe src="results/figures/top10_degs_all_clusters_AL03.html" width="100%" height="500px" style="border:none;"></iframe></p>
 
 
 </section>
