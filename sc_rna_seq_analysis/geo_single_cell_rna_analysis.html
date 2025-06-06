@@ -404,7 +404,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <iframe src="results/figures/umap_resolutions_AL03.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
 <p><strong>Cell-type annotation involves using a set of marker genes, which are genes that are often highly expressed in a particular cell-type, to label our clusters. We use scanpy’s rank_genes_groups() function, which performs the differential expression by using the Wilcoxon ranked sum test to determine which genes in each cluster are significantly differently expressed than in other clusters.</strong></p>
-<p><strong>We can either perform manual cell-type annotation using a pre-defined list of marker genes, or we can use differentially expressed genes as our markers. I decided to use the DE genes as markers. </strong></p>
+<p><strong>We can either perform manual cell-type annotation using a pre-defined list of marker genes, or we can use differentially expressed genes as our markers.</strong></p>
 <p><strong>The dotplots below help to visualize which genes are most highly expressed in each cluster. The size of the dot represents how many cells in the cluster express that particular gene, while the color is the mean expression level of that gene within that cluster.</strong></p>
 <p><strong>Dotplot of DE Genes AL02</strong></p>
 <iframe src="results/figures/dotplot_ranked_genes_AL02.png" width="100%" height="400px" style="border:none;">
@@ -412,8 +412,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Dotplot of DE Genes AL03</strong></p>
 <iframe src="results/figures/dotplot_ranked_genes_AL03.png" width="100%" height="400px" style="border:none;">
 </iframe>
+<p><strong>AL02 UMAP Cell-type Annotation</strong></p>
 <iframe src="results/figures/umap_annotations_AL02.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
+<p><strong>AL03 UMAP Cell-type Annotation</strong></p>
 <iframe src="results/figures/umap_annotations_AL03.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
 <p><strong>The table below shows the top 10 differentially expressed genes per cluster</strong></p>
