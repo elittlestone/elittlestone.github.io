@@ -170,6 +170,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#clustering" id="toc-clustering" class="nav-link" data-scroll-target="#clustering">3.6 Clustering</a></li>
   <li><a href="#re-assess-qc-and-cell-filtering" id="toc-re-assess-qc-and-cell-filtering" class="nav-link" data-scroll-target="#re-assess-qc-and-cell-filtering">3.7 Re-assess QC and Cell-filtering</a></li>
   <li><a href="#cell-type-annotation-and-differential-gene-expression-analysis" id="toc-cell-type-annotation-and-differential-gene-expression-analysis" class="nav-link" data-scroll-target="#cell-type-annotation-and-differential-gene-expression-analysis">3.8 Cell-type annotation and Differential Gene Expression Analysis</a></li>
+  <li><a href="#integration" id="toc-integration" class="nav-link" data-scroll-target="#integration">4 Integration</a></li>
+  <li><a href="#nearest-neighbor-graph-constructionvisualization-1" id="toc-nearest-neighbor-graph-constructionvisualization-1" class="nav-link" data-scroll-target="#nearest-neighbor-graph-constructionvisualization-1">4.1 Nearest neighbor graph construction/visualization</a></li>
+  <li><a href="#clustering-1" id="toc-clustering-1" class="nav-link" data-scroll-target="#clustering-1">4.2 Clustering</a></li>
+  <li><a href="#re-assess-qc-and-cell-filtering-1" id="toc-re-assess-qc-and-cell-filtering-1" class="nav-link" data-scroll-target="#re-assess-qc-and-cell-filtering-1">4.3 Re-assess QC and Cell-filtering</a></li>
+  <li><a href="#cell-type-annotation-and-dge-analysis" id="toc-cell-type-annotation-and-dge-analysis" class="nav-link" data-scroll-target="#cell-type-annotation-and-dge-analysis">4.4 Cell-type annotation and DGE Analysis</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -233,7 +238,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> add python snakemake sra-tools scanpy anndata cellxgene scikit-image <span class="dt">\</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>pandas quarto anndata </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>pandas quarto anndata harmonypy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><strong>For the rest of the analysis, our commands can either be run via pixi by doing: <em>pixi run ‘executable’</em> or by launching a subshell with <em>pixi s</em> and running commands as normal.</strong></p>
@@ -412,6 +417,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Dotplot of DE Genes AL03</strong></p>
 <iframe src="results/figures/dotplot_ranked_genes_AL03.png" width="100%" height="400px" style="border:none;">
 </iframe>
+<p><strong>In order to annotate the cell-types, I used the score_marker_genes() method from scanpy to find the highest expressed gene per cluster, then used a mapping between known marker genes and these highest expressed genes to classify the cluster.</strong></p>
 <p><strong>AL02 UMAP Cell-type Annotation</strong></p>
 <iframe src="results/figures/umap_annotations_AL02.pdf" width="100%" height="400px" style="border:none;">
 </iframe>
@@ -424,6 +430,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </iframe>
 <p><strong>AL03</strong></p>
 <iframe src="results/figures/top10_degs_all_clusters_AL03.html" width="100%" height="500px" style="border:none;">
+</iframe>
+</section>
+<section id="integration" class="level3">
+<h3 class="anchored" data-anchor-id="integration">4 Integration</h3>
+<p><strong>After completing the SC RNA-seq analysis separately for each sample, we can also analyze them together by performing integration and batch correction, then doing clustering and cell-type annotation on the combined samples. We keep the filtered/QC steps and then write these filtered annotation data objects to .h5ad files, and then perform integration and batch correction, as well as the downstream steps of clustering, annotation, and DGE analysis.</strong></p>
+</section>
+<section id="nearest-neighbor-graph-constructionvisualization-1" class="level3">
+<h3 class="anchored" data-anchor-id="nearest-neighbor-graph-constructionvisualization-1">4.1 Nearest neighbor graph construction/visualization</h3>
+<p><strong>UMAP Nearest Neighbor Graph</strong></p>
+<iframe src="results/combined_samples_figures/umap_neighbors_combined_samples.png" width="100%" height="500px" style="border:none;">
+</iframe>
+</section>
+<section id="clustering-1" class="level3">
+<h3 class="anchored" data-anchor-id="clustering-1">4.2 Clustering</h3>
+<p><strong>UMAP Clustering</strong></p>
+<iframe src="results/combined_samples_figures/umap_leiden_combined_samples.png" width="100%" height="500px" style="border:none;">
+</iframe>
+</section>
+<section id="re-assess-qc-and-cell-filtering-1" class="level3">
+<h3 class="anchored" data-anchor-id="re-assess-qc-and-cell-filtering-1">4.3 Re-assess QC and Cell-filtering</h3>
+<p><strong>Doublet QC</strong></p>
+<iframe src="results/combined_samples_figures/umap_doublet_qc_combined_samples.png" width="100%" height="500px" style="border:none;">
+</iframe>
+<p><strong>Mitochondrial Counts</strong></p>
+<iframe src="results/combined_samples_figures/umap_mt_counts_combined_samples.png" width="100%" height="500px" style="border:none;">
+</iframe>
+</section>
+<section id="cell-type-annotation-and-dge-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="cell-type-annotation-and-dge-analysis">4.4 Cell-type annotation and DGE Analysis</h3>
+<p><strong>UMAP Leiden Resolutions</strong></p>
+<iframe src="results/combined_samples_figures/umap_resolutions_combined_samples.png" width="100%" height="500px" style="border:none;">
+</iframe>
+<p><strong>UMAP Cell-type Annotation</strong></p>
+<iframe src="results/combined_samples_figures/umap_annotations_combined_samples.png" width="100%" height="500px" style="border:none;">
+</iframe>
+<p><strong>Top 10 DE Genes</strong></p>
+<iframe src="results/combined_samples_figures/top10_degs_all_clusters_combined_samples.html" width="100%" height="500px" style="border:none;">
 </iframe>
 <p><strong>All in all, I have performed a full Single-Cell RNA sequencing analysis starting from the raw sequencing data, performing read alignment/transcript quantification, and carried out post-processing steps with the python package Scanpy. All the scripts necessary to run these analyses and generate all subsequent plots are located in my github repo found here <a href="https://github.com/elittlestone/SC_RNA_SEQ">SC_RNA_Seq Github Repo</a>.</strong></p>
 
