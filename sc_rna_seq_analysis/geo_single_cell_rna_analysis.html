@@ -170,7 +170,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#clustering" id="toc-clustering" class="nav-link" data-scroll-target="#clustering">3.6 Clustering</a></li>
   <li><a href="#re-assess-qc-and-cell-filtering" id="toc-re-assess-qc-and-cell-filtering" class="nav-link" data-scroll-target="#re-assess-qc-and-cell-filtering">3.7 Re-assess QC and Cell-filtering</a></li>
   <li><a href="#cell-type-annotation-and-differential-gene-expression-analysis" id="toc-cell-type-annotation-and-differential-gene-expression-analysis" class="nav-link" data-scroll-target="#cell-type-annotation-and-differential-gene-expression-analysis">3.8 Cell-type annotation and Differential Gene Expression Analysis</a></li>
-  <li><a href="#integration" id="toc-integration" class="nav-link" data-scroll-target="#integration">4 Integration</a></li>
+  </ul></li>
+  <li><a href="#integration" id="toc-integration" class="nav-link" data-scroll-target="#integration">4 Integration</a>
+  <ul class="collapse">
   <li><a href="#nearest-neighbor-graph-constructionvisualization-1" id="toc-nearest-neighbor-graph-constructionvisualization-1" class="nav-link" data-scroll-target="#nearest-neighbor-graph-constructionvisualization-1">4.1 Nearest neighbor graph construction/visualization</a></li>
   <li><a href="#clustering-1" id="toc-clustering-1" class="nav-link" data-scroll-target="#clustering-1">4.2 Clustering</a></li>
   <li><a href="#re-assess-qc-and-cell-filtering-1" id="toc-re-assess-qc-and-cell-filtering-1" class="nav-link" data-scroll-target="#re-assess-qc-and-cell-filtering-1">4.3 Re-assess QC and Cell-filtering</a></li>
@@ -432,10 +434,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <iframe src="results/figures/top10_degs_all_clusters_AL03.html" width="100%" height="500px" style="border:none;">
 </iframe>
 </section>
-<section id="integration" class="level3">
-<h3 class="anchored" data-anchor-id="integration">4 Integration</h3>
-<p><strong>After completing the SC RNA-seq analysis separately for each sample, we can also analyze them together by performing integration and batch correction, then doing clustering and cell-type annotation on the combined samples. We keep the filtered/QC steps and then write these filtered annotation data objects to .h5ad files, and then perform integration and batch correction, as well as the downstream steps of clustering, annotation, and DGE analysis.</strong></p>
 </section>
+<section id="integration" class="level2">
+<h2 class="anchored" data-anchor-id="integration">4 Integration</h2>
+<p><strong>After completing the SC RNA-seq analysis separately for each sample, we can also analyze them together by performing integration and batch correction, then doing clustering and cell-type annotation on the combined samples. We keep the filtered/QC steps and then write these filtered annotation data objects to .h5ad files, and then perform integration and batch correction, as well as the downstream steps of clustering, annotation, and DGE analysis.</strong></p>
 <section id="nearest-neighbor-graph-constructionvisualization-1" class="level3">
 <h3 class="anchored" data-anchor-id="nearest-neighbor-graph-constructionvisualization-1">4.1 Nearest neighbor graph construction/visualization</h3>
 <p><strong>UMAP Nearest Neighbor Graph</strong></p>
