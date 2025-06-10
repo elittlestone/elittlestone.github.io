@@ -177,6 +177,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#clustering-1" id="toc-clustering-1" class="nav-link" data-scroll-target="#clustering-1">4.2 Clustering</a></li>
   <li><a href="#re-assess-qc-and-cell-filtering-1" id="toc-re-assess-qc-and-cell-filtering-1" class="nav-link" data-scroll-target="#re-assess-qc-and-cell-filtering-1">4.3 Re-assess QC and Cell-filtering</a></li>
   <li><a href="#cell-type-annotation-and-dge-analysis" id="toc-cell-type-annotation-and-dge-analysis" class="nav-link" data-scroll-target="#cell-type-annotation-and-dge-analysis">4.4 Cell-type annotation and DGE Analysis</a></li>
+  <li><a href="#automated-cell-type-annotation-with-celltypist" id="toc-automated-cell-type-annotation-with-celltypist" class="nav-link" data-scroll-target="#automated-cell-type-annotation-with-celltypist">4.5 Automated Cell-type Annotation with Celltypist**</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -305,7 +306,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </iframe>
 <p><strong>In the 10x SC-RNA seq technology, each barcode corresponds to a droplet. Ideally, each droplet will contain one cell. However, it’s possible for two or more cells to end up in a droplet (doublet), or no cells (empty droplet). The knee-plots show how each barcode ranks in terms of total UMIs, which represent unique transcripts captured from each cell. Droplets with a sufficiently low UMI count are likely empty droplets, and Cellranger has a probabilistic model it uses to filter out these droplets and only keep ‘real cells’. Our knee-plots show steep dropoffs, meaning there is a clear distinction between real cells and empty droplets.</strong></p>
 <p><strong>Instead of just counting the total number of transcripts that map to a particular gene and considering that the expression level, UMIs are crucial in order to account for PCR bias. During library prep, transcripts are amplified before sequencing. This amplification can be biased depending on several factors like the GC content of the transcript or transcript length. The UMIs are short oligo-nucleotides that are added to the transcripts prior to amplification, capturing the total UNIQUE transcripts per gene.</strong></p>
-<p><strong>The main output of Cellranger is a filtered gene-cell expression matrix; rows are genes, columns are cells, and values in the matrix represent the number of UMIs (transcript counts) for each gene in each cell. This count serves as a proxy for gene expression. This filtered .h5 matrix file can then be used for post-processing with software tools like Scanpy in python or Seurat in R. Cellranger count also performs its own post-processing steps including clustering and differential gene expression analysis, however I will perform my own with the python Single Cell Analysis package <em>Scanpy</em>.</strong></p>
+<p><strong>The main output of Cellranger is a filtered gene-cell expression matrix; rows are cells (observations), columns are genes (variables/features), and values in the matrix represent the number of UMIs (transcript counts) for each gene in each cell. This count serves as a proxy for gene expression. This filtered .h5 matrix file can then be used for post-processing with software tools like Scanpy in python or Seurat in R. Cellranger count also performs its own post-processing steps including clustering and differential gene expression analysis, however I will perform my own with the python Single Cell Analysis package <em>Scanpy</em>.</strong></p>
+<p><strong>Annotation Data object Schema/Layout</strong></p>
+<iframe src="results/figures/anndata_schema_full.png" width="100%" height="400px" style="border:none;">
+</iframe>
 </section>
 </section>
 <section id="post-processing-with-scanpy" class="level2">
@@ -464,11 +468,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>UMAP Leiden Resolutions</strong></p>
 <iframe src="results/combined_samples_figures/umap_resolutions_combined_samples.pdf" width="100%" height="500px" style="border:none;">
 </iframe>
+<p><strong>Dotplot of DE Genes</strong></p>
+<iframe src="results/figures/dotplot__ranked_genes_combined_samples.pdf" width="100%" height="500px" style="border:none;">
+</iframe>
 <p><strong>UMAP Cell-type Annotation</strong></p>
 <iframe src="results/combined_samples_figures/umap_annotations_combined_samples.pdf" width="100%" height="500px" style="border:none;">
 </iframe>
 <p><strong>Top 10 DE Genes</strong></p>
 <iframe src="results/combined_samples_figures/top10_degs_all_clusters_combined_samples.html" width="100%" height="500px" style="border:none;">
+</iframe>
+</section>
+<section id="automated-cell-type-annotation-with-celltypist" class="level3">
+<h3 class="anchored" data-anchor-id="automated-cell-type-annotation-with-celltypist">4.5 Automated Cell-type Annotation with Celltypist**</h3>
+<p><strong>Instead of manual cell-type annotation, we can use the python package Celltypist. </strong></p>
+<p><strong>Coarse UMAP using CellTypist</strong></p>
+<iframe src="results/combined_samples_figures/umap_celltypist_coarse_annotations.png" width="100%" height="500px" style="border:none;">
+</iframe>
+<p><strong>Finer UMAP using CellTypist</strong></p>
+<iframe src="results/combined_samples_figures/umap_celltypist_fine_annotations.png" width="100%" height="500px" style="border:none;">
 </iframe>
 <p><strong>All in all, I have performed a full Single-Cell RNA sequencing analysis starting from the raw sequencing data, performing read alignment/transcript quantification, and carried out post-processing steps with the python package Scanpy. All the scripts necessary to run these analyses and generate all subsequent plots are located in my github repo found here <a href="https://github.com/elittlestone/SC_RNA_SEQ">SC_RNA_Seq Github Repo</a>.</strong></p>
 
