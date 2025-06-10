@@ -442,6 +442,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="integration" class="level2">
 <h2 class="anchored" data-anchor-id="integration">4 Integration</h2>
 <p><strong>After completing the SC RNA-seq analysis separately for each sample, we can also analyze them together by performing integration and batch correction, then doing clustering and cell-type annotation on the combined samples. We keep the filtered/QC steps and then write these filtered annotation data objects to .h5ad files, and then perform integration and batch correction, as well as the downstream steps of clustering, annotation, and DGE analysis.</strong></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">snakemake</span> <span class="at">-s</span> integrate_samples.smk <span class="at">--cores</span> 8 <span class="at">-p</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <section id="nearest-neighbor-graph-constructionvisualization-1" class="level3">
 <h3 class="anchored" data-anchor-id="nearest-neighbor-graph-constructionvisualization-1">4.1 Nearest neighbor graph construction/visualization</h3>
 <p><strong>UMAP Nearest Neighbor Graph</strong></p>
